@@ -17,13 +17,11 @@ router.route('/')
   })
   .post(function(req, res){
 
-    console.log("About to create new POST");
     var post = new Post({
       title: req.body.title,
       content: req.body.content,
       img: req.body.img,
     });
-    console.log("here is my post: ", post);
 
     post.save(function(err, post){
       if(err){
@@ -33,9 +31,19 @@ router.route('/')
       }
     });
 
-
-
   });
+
+router.route('/:post_id')
+  .get(function(req, res){
+    Post.findById( req.params.post_id, function(err, post) {
+      if(err){
+        console.log(err)
+      } else {
+        res.json(post)
+      }
+    })
+  });
+
 
 module.exports = router;
 
