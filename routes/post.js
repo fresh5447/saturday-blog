@@ -60,6 +60,15 @@ router.route('/:post_id')
 
     })
   })
+  .delete(function(req, res){
+    Post.remove( { _id: req.params.post_id }, function(err) {
+      if(err){
+        console.log('Could not delete post', err)
+      } else {
+        res.json({message: 'post deleted'})
+      }
+    })
+  });
 
 
 module.exports = router;
