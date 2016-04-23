@@ -11,6 +11,8 @@ var OnePost = require('./OnePost');
         -PostDisplay         --> Pure render (stateless), for each post
     -OnePost
     -NewPost
+      -- PostFormData
+        -- PostFormDisplay
 */
 
 var BlogApp = React.createClass({
