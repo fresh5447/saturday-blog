@@ -22,6 +22,7 @@ var Home = React.createClass({
         </div>
         <div className="container">
           <div className="row">
+          <h2> Skills </h2>
             <div className="col-sm-6">
               <div className="card my-card">
                 <img className="card-img-top profile-img" src="http://i.onionstatic.com/onion/2508/0/original/600.jpg" alt="Card image cap"/>
