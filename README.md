@@ -26,13 +26,13 @@ A blogging engine built with Node/React App.
 ## Page Layout - Flow Diagram
 
 1. Home Page.
-* Skills
-* Portfolio
+-- Skills
+-- Portfolio
 2. Blog Page 
-* View All Blogs
-* View One Blog
+-- View All Blogs
+-- View One Blog
 3. Contact Page 
-* Information
+-- Information
 
 
 
