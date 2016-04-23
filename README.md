@@ -3,7 +3,8 @@
 -----------------------
 A blogging engine built with Node/React App.
 
-
+# Server Notes
+--------------------------------
 ### Our API endpoints for `POST` resource
 
 | method        | url           | response          |
@@ -20,7 +21,7 @@ A blogging engine built with Node/React App.
     "title": "Learning How to Blog",
     "content": "Lorem ipsum continued and just keeps continuing.",
     "img": "www.url/img/com",
-    "comments": ["1234432", 1234433, 1234434, 1234435]
+    "comments": ["1234432", "1234433", "1234434", "1234435"]
 }
 ```
 
@@ -32,7 +33,8 @@ A blogging engine built with Node/React App.
 | `POST`        | /api/posts/:post_id               | JSON: create POST  |
 | `DELETE`      | /api/posts/:post_id/comment/:comment_id  | JSON: edit POST    |
 
-
+# Client Notes
+-----------------------------
 ### Page Layout - Flow Diagram
 
 1. Home Page.
