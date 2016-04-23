@@ -1,4 +1,6 @@
 var React = require('react');
+var PostList = require('./PostList');
+
 
 var AllPostsData = React.createClass({
   getInitialState: function() {
@@ -20,11 +22,7 @@ var AllPostsData = React.createClass({
     this.loadPostsFromServer();
   },
   render: function() {
-    return (
-      <div>
-        <h5> Stupid Divs </h5>
-      </div>
-      )
+    return this.state.allPosts ? <PostList posts={ this.state.allPosts } /> : null;
   }
 });
 
