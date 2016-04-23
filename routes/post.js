@@ -8,6 +8,27 @@ var Post = require('../models/post');
 router.route('/')
   .get(function(req, res){
     res.json({message: "Post Router Hooked Up"})
+  })
+  .post(function(req, res){
+
+    console.log("About to create new POST");
+    var post = new Post({
+      title: req.body.title,
+      content: req.body.content,
+      img: req.body.img,
+    });
+    console.log("here is my post: ", post);
+
+    post.save(function(err, post){
+      if(err){
+        console.log(err)
+      } else {
+        res.json(post)
+      }
+    });
+
+
+
   });
 
 module.exports = router;

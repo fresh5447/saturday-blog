@@ -2,7 +2,10 @@
 var path = require('path');
 var express = require('express');
 var bodyParser = require('body-parser');
+
 var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/saturday-blog');
+
 var Post = require('./models/post');
 var PostRouter = require('./routes/post');
 
