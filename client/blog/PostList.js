@@ -8,7 +8,7 @@ var PostList = function(props) {
   });
 
   return ( 
-    <div>
+    <div className="my-flex-box">
       { posts }
     </div>
     )

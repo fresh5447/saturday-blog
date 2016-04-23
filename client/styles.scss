@@ -11,3 +11,8 @@ body {
   max-width: 65%;
   height: auto;
 }
+
+.my-flex-box {
+  display: flex;
+  justify-content: space-between;
+}
