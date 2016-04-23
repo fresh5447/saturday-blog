@@ -23,4 +23,16 @@ A blogging engine built with Node/React App.
 | `DELETE`      | /api/posts/:post_id/comment/:comment_id  | JSON: edit POST    |
 
 
+## Page Layout - Flow Diagram
+
+A. Home Page
+⋅⋅* Skills
+⋅⋅* Portfolio  
+B. Blog Page
+⋅⋅* View All Blogs
+⋅⋅* View One Blog 
+C. Contact Page
+⋅⋅* Address Information
+
+
 
