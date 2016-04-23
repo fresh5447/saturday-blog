@@ -22,6 +22,7 @@
   "homepage": "https://github.com/fresh5447/saturday-blog#readme",
   "dependencies": {
     "body-parser": "^1.15.0",
-    "express": "^4.13.4"
+    "express": "^4.13.4",
+    "mongoose": "^4.4.13"
   }
 }
