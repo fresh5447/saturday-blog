@@ -1,7 +1,7 @@
 # Node Blog
 
 -----------------------
-A blogging engine built with Node/React app.
+A blogging engine built with Node/React App.
 
 
 ## Our API endpoints for `POST` resource
