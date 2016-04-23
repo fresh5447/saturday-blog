@@ -1,0 +1,33 @@
+//IMPORT DEPENDENCIES
+var path = require('path');
+var express = require('express');
+var bodyParser = require('body-parser');
+
+//CREATE NEW INSTANCE OF APP
+var app = express();
+
+//MOUNT MIDDLEWARE
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+
+app.get('/', function(req, res) {
+  res.sendFile(path.join(__dirname, 'index.html'));
+});
+
+
+var port = process.env.PORT || 3000;
+var hostname = process.env.HOSTNAME || "localhost";
+
+
+app.listen(port, hostname, function(err){
+  if(err){
+    console.log(err, "error starting server")
+  } else {
+    console.log("Listening at http://" + hostname + ":" + port)
+  }
+});
+
+
+
+
