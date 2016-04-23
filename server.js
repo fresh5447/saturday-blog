@@ -2,6 +2,9 @@
 var path = require('path');
 var express = require('express');
 var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
+var Post = require('./models/post');
+var PostRouter = require('./routes/post');
 
 //CREATE NEW INSTANCE OF APP
 var app = express();
@@ -14,6 +17,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
+
+app.use('/api/posts', PostRouter);
 
 
 var port = process.env.PORT || 3000;

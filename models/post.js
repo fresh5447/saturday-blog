@@ -1,5 +1,5 @@
-var monogoose = require('monogoose');
-var Schema = monogoose.Schema;
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
 
 var PostSchema = new Schema({
   title: String,
