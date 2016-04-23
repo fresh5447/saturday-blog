@@ -6,6 +6,9 @@ var OnePost = require('./OnePost');
 /*
   -BlogApp
     -AllPostsApp
+      -AllPostsData          --> Gets All Data and passes it down.
+        -PostList            --> Passes data to PostDisplay component
+        -PostDisplay         --> Pure render (stateless), for each post
     -OnePost
     -NewPost
 */

@@ -1,4 +1,5 @@
 var React = require('react');
+var AllPostsData = require('./AllPostsData');
 
 /*
   -BlogApp
@@ -9,11 +10,7 @@ var React = require('react');
 
 var AllPostsApp = React.createClass({
   render: function() {
-    return (
-      <div>
-        <h4> This componenet shows all of my blog posts!! </h4>
-      </div>
-      )
+    return <AllPostsData />
   }
 });
 
