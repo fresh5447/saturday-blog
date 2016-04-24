@@ -3,7 +3,7 @@ var PostFormData = require('./PostFormData');
 
 var NewPost = React.createClass({
   render: function() {
-    return <PostFormData/>
+    return <PostFormData toggleBlogComp={this.props.toggleBlogComp}/>
   }
 });
 

@@ -2,22 +2,22 @@ var React = require('react');
 
 var PostFormDisplay = function(props){
   return (
-    <form role="form">
+    <form onSubmit={ props.submitPostToServer } role="form">
       <legend>New Blog Post</legend>
     
       <div className="form-group">
         <label>Title</label>
-        <input type="text" className="form-control" id="" placeholder="title"/>
+        <input onChange={ props.onTitleChange } type="text" className="form-control" id="" placeholder="title"/>
       </div>
     
       <div className="form-group">
         <label>Content</label>
-        <input type="text" className="form-control" id="" placeholder="content"/>
+        <input onChange={ props.onContentChange } type="text" className="form-control" id="" placeholder="content"/>
       </div>
 
       <div className="form-group">
         <label>Image</label>
-        <input type="text" className="form-control" id="" placeholder="img url"/>
+        <input onChange={ props.onImgChange } type="text" className="form-control" id="" placeholder="img url"/>
       </div>
       
     
