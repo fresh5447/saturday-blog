@@ -22,7 +22,7 @@ var AllPostsData = React.createClass({
     this.loadPostsFromServer();
   },
   render: function() {
-    return this.state.allPosts ? <PostList posts={ this.state.allPosts } /> : null;
+    return this.state.allPosts ? <PostList toggleBlogComp={this.props.toggleBlogComp} posts={ this.state.allPosts } /> : null;
   }
 });
 

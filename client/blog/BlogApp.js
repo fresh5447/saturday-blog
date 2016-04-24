@@ -10,6 +10,8 @@ var OnePost = require('./OnePost');
         -PostList            --> Passes data to PostDisplay component
         -PostDisplay         --> Pure render (stateless), for each post
     -OnePost
+      --OnePostData
+        --OnePostDisplay
     -NewPost
       -- PostFormData
         -- PostFormDisplay
@@ -18,20 +20,30 @@ var OnePost = require('./OnePost');
 var BlogApp = React.createClass({
   getInitialState: function() {
     return {
-      activeBlogComp: 'AllPostsApp'
+      activeBlogComp: 'AllPostsApp',
+      activeBlogId: null
     }
   },
   showBlogComp: function() {
     if(this.state.activeBlogComp === 'AllPostsApp'){
-      return <AllPostsApp/>
+      return <AllPostsApp toggleBlogComp={this.toggleBlogComp}/>
     } else if(this.state.activeBlogComp === 'NewPost'){
       return <NewPost toggleBlogComp={this.toggleBlogComp} />
     } else if(this.state.activeBlogComp === 'OnePost') {
-      return <OnePost/>
+      return this.state.activeBlogId ? <OnePost id={ this.state.activeBlogId }/> : null;
     }
   },
-  toggleBlogComp: function(compName) {
-    this.setState({ activeBlogComp: compName })
+  toggleBlogComp: function(compName, id) {
+
+    if(id){
+      console.log("setting activeBlogId", id)
+      this.setState({ activeBlogComp: compName, activeBlogId: id });
+    } else {
+      this.setState({ activeBlogComp: compName });
+    }
+
+
+
   },
   render: function() {
     return (
